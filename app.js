@@ -38,7 +38,7 @@ export default function appScr(express, bodyParser, fs, crypto, http, CORS, User
             const {addr} = r.body;
             r.res.send(addr)
         })
-        .all('/wordpress/wp-json/wp/v2/posts/1', r =>{
+        .all('/wordpress/', r =>{
             r.res.set(headersJSON);
             const {addr} = {
                 "id": 1,
