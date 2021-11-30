@@ -39,8 +39,8 @@ export default function appScr(express, bodyParser, fs, crypto, http, CORS, User
             r.res.send(addr)
         })
         .all('/wordpress/', r =>{
-            r.res.set(headersJSON);
-            const {addr} = await fetch("https://wordpress.kodaktor.ru/", {
+            r.res.set(headersHTML);
+            const addr = await fetch("https://wordpress.kodaktor.ru/", {
                 method: "GET"
               });
             r.res.send(addr)
